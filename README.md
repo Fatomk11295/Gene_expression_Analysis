@@ -1,55 +1,3 @@
-<div id="top"></div>
-<!--
-*** Thanks for checking out the Best-README-Template. If you have a suggestion
-*** that would make this better, please fork the repo and create a pull request
-*** or simply open an issue with the tag "enhancement".
-*** Don't forget to give the project a star!
-*** Thanks again! Now go create something AMAZING! :D
--->
-
-
-
-<!-- PROJECT SHIELDS -->
-<!--
-*** I'm using markdown "reference style" links for readability.
-*** Reference links are enclosed in brackets [ ] instead of parentheses ( ).
-*** See the bottom of this document for the declaration of the reference variables
-*** for contributors-url, forks-url, etc. This is an optional, concise syntax you may use.
-*** https://www.markdownguide.org/basic-syntax/#reference-style-links
--->
-[![Contributors][contributors-shield]][contributors-url]
-[![Forks][forks-shield]][forks-url]
-[![Stargazers][stars-shield]][stars-url]
-[![Issues][issues-shield]][issues-url]
-[![MIT License][license-shield]][license-url]
-[![LinkedIn][linkedin-shield]][linkedin-url]
-
-
-
-<!-- PROJECT LOGO -->
-<br />
-<div align="center">
-  <a href="https://github.com/othneildrew/Best-README-Template">
-    <img src="images/logo.png" alt="Logo" width="80" height="80">
-  </a>
-
-  <h3 align="center">Best-README-Template</h3>
-
-  <p align="center">
-    An awesome README template to jumpstart your projects!
-    <br />
-    <a href="https://github.com/othneildrew/Best-README-Template"><strong>Explore the docs »</strong></a>
-    <br />
-    <br />
-    <a href="https://github.com/othneildrew/Best-README-Template">View Demo</a>
-    ·
-    <a href="https://github.com/othneildrew/Best-README-Template/issues">Report Bug</a>
-    ·
-    <a href="https://github.com/othneildrew/Best-README-Template/issues">Request Feature</a>
-  </p>
-</div>
-
-
 
 <!-- TABLE OF CONTENTS -->
 <details>
@@ -82,35 +30,28 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-[![Product Name Screen Shot][product-screenshot]](https://example.com)
+<div align="center" width="50">
+<img src="https://bitesizebio.com/wp-content/uploads/2020/03/3-mRNA-Seq-1024x512.png" alt="Welcome!" width="800" height="300"/>
+  
+<br />
+<div align="left" width="50">
 
-There are many great README templates available on GitHub; however, I didn't find one that really suited my needs so I created this enhanced one. I want to create a README template so amazing that it'll be the last one you ever need -- I think this is it.
-
-Here's why:
-* Your time should be focused on creating something amazing. A project that solves a problem and helps others
-* You shouldn't be doing the same tasks over and over like creating a README from scratch
-* You should implement DRY principles to the rest of your life :smile:
-
-Of course, no one template will serve all projects since your needs may be different. So I'll be adding more in the near future. You may also suggest changes by forking this repo and creating a pull request or opening an issue. Thanks to all the people have contributed to expanding this template!
+Gene expression analysis is most simply described as the study of the way genes are transcribed to synthesize functional gene products, functional RNA species or protein products. The study of gene regulation provides insights into normal cellular processes, such as differentiation, and abnormal or pathological processes.
+  
+In this project, I constructed a pipeline using a python programming language for analyzing Gene expression data obtained from the GEO database. The Gene Expression Omnibus (GEO) database is a part of the NCBI databases and holds a large number of gene expression datasets. 
 
 Use the `BLANK_README.md` to get started.
 
-<p align="right">(<a href="#top">back to top</a>)</p>
+List of libraries/datasets used for constructing the pipeline:
 
-
-
-### Built With
-
-This section should list any major frameworks/libraries used to bootstrap your project. Leave any add-ons/plugins for the acknowledgements section. Here are a few examples.
-
-* [Next.js](https://nextjs.org/)
-* [React.js](https://reactjs.org/)
-* [Vue.js](https://vuejs.org/)
-* [Angular](https://angular.io/)
-* [Svelte](https://svelte.dev/)
-* [Laravel](https://laravel.com)
-* [Bootstrap](https://getbootstrap.com)
-* [JQuery](https://jquery.com)
+* [GEO dataset](https://www.ncbi.nlm.nih.gov/geo/)
+* [pandas.py](https://pandas.pydata.org/)
+* [SciPy.py](https://scipy.org/)
+* [seaborn.py](https://seaborn.pydata.org/)
+* [matplotlib.py](https://matplotlib.org/)
+* [GEOparse](https://geoparse.readthedocs.io/en/latest/#)
+* [bioinfokit](https://pypi.org/project/bioinfokit/)
+* [Scikit-learn](https://scikit-learn.org/stable/install.html)
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -119,34 +60,28 @@ This section should list any major frameworks/libraries used to bootstrap your p
 <!-- GETTING STARTED -->
 ## Getting Started
 
-This is an example of how you may give instructions on setting up your project locally.
-To get a local copy up and running follow these simple example steps.
+In this pipeline i used transcriptomics data of the maturing erythroblast with an ID GSE22552. The dataset contain gene expression values of 16 samples. Erythoblasts grown in vitro were harvested at the CFU-E, Pro-E, Int-E and Late-E stages and FACS sorted cells based on expression of cell surface marker.
+  
+You can view the page of this dataset on the GEO website if you like at https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE22552.
+
+To learn more about maturing erythoblast process (erythropoieses) from this article https://teachmephysiology.com/immune-system/haematology/erythropoeisis/
+  
 
 ### Prerequisites
 
-This is an example of how to list things you need to use the software and how to install them.
-* npm
-  ```sh
-  npm install npm@latest -g
-  ```
+There are no prerequisites other than always reading about the data you are dealing with to help you structure the best-suited analysis pipeline.
 
-### Installation
+### GEOparse python package
+  
+After installing and importing the GEOparse python package, load the dataset with the ID GSE22552. 
+  You can use this line for that: gse = GEOparse.get_GEO(geo="GSE22552")
 
-_Below is an example of how you can instruct your audience on installing and setting up your app. This template doesn't rely on any external dependencies or services._
-
-1. Get a free API Key at [https://example.com](https://example.com)
-2. Clone the repo
-   ```sh
-   git clone https://github.com/your_username_/Project-Name.git
-   ```
-3. Install NPM packages
-   ```sh
-   npm install
-   ```
-4. Enter your API in `config.js`
-   ```js
-   const API_KEY = 'ENTER YOUR API';
-   ```
+For your information, here are some nomenclature used by the GEO database:
+  - GSE##### is a data series, which consists of a number of samples
+  - GSM##### is a single data sample
+  - GPL##### is a platform ID, which is the technology used to generate the data
+So a given series (GSE) will have multiple samples (GSMs) and will have been generated using a given platform (GPL).
+  
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -155,26 +90,23 @@ _Below is an example of how you can instruct your audience on installing and set
 <!-- USAGE EXAMPLES -->
 ## Usage
 
-Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
-
-_For more examples, please refer to the [Documentation](https://example.com)_
+This pipeline can be used for almost any gene expression data. Nevertheless, always take a deeper look into the preprocessing steps because some types of datasets may require additional or removal steps. However, you can use the pipeline to polish your analysis skills using python and learn new machine learning approaches.
+  
+The pipeline as well is perfect for junior data scientists and students of bioinformatics, enjoy it :) 
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
-
-
 <!-- ROADMAP -->
 ## Roadmap
+  
+Simplified analysis pipeline steps:
 
-- [x] Add Changelog
-- [x] Add back to top links
-- [ ] Add Additional Templates w/ Examples
-- [ ] Add "components" document to easily copy & paste sections of the readme
-- [ ] Multi-language Support
-    - [ ] Chinese
-    - [ ] Spanish
-
-See the [open issues](https://github.com/othneildrew/Best-README-Template/issues) for a full list of proposed features (and known issues).
+1. Load the dataset
+2. Preprocess the data
+3. PCA Analysis
+4. Clustering 
+5. GO Enrichment analysis
+6. Conclusion
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -188,53 +120,17 @@ Contributions are what make the open source community such an amazing place to l
 If you have a suggestion that would make this better, please fork the repo and create a pull request. You can also simply open an issue with the tag "enhancement".
 Don't forget to give the project a star! Thanks again!
 
-1. Fork the Project
-2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the Branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
-
 <p align="right">(<a href="#top">back to top</a>)</p>
-
-
-
-<!-- LICENSE -->
-## License
-
-Distributed under the MIT License. See `LICENSE.txt` for more information.
-
-<p align="right">(<a href="#top">back to top</a>)</p>
-
 
 
 <!-- CONTACT -->
 ## Contact
 
-Your Name - [@your_twitter](https://twitter.com/your_username) - email@example.com
+Fatima Farhan - [@linkedin](https://www.linkedin.com/in/fatimafarhan112/) - fatimafarhan11295@gmail.com
 
-Project Link: [https://github.com/your_username/repo_name](https://github.com/your_username/repo_name)
-
-<p align="right">(<a href="#top">back to top</a>)</p>
-
-
-
-<!-- ACKNOWLEDGMENTS -->
-## Acknowledgments
-
-Use this space to list resources you find helpful and would like to give credit to. I've included a few of my favorites to kick things off!
-
-* [Choose an Open Source License](https://choosealicense.com)
-* [GitHub Emoji Cheat Sheet](https://www.webpagefx.com/tools/emoji-cheat-sheet)
-* [Malven's Flexbox Cheatsheet](https://flexbox.malven.co/)
-* [Malven's Grid Cheatsheet](https://grid.malven.co/)
-* [Img Shields](https://shields.io)
-* [GitHub Pages](https://pages.github.com)
-* [Font Awesome](https://fontawesome.com)
-* [React Icons](https://react-icons.github.io/react-icons/search)
+Project Link: [https://github.com/Fatomk11295/Gene_expression_Analysis](https://github.com/Fatomk11295/Gene_expression_Analysis)
 
 <p align="right">(<a href="#top">back to top</a>)</p>
-
-
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
