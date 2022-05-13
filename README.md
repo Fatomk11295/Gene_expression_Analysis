@@ -40,7 +40,7 @@ Gene expression analysis is most simply described as the study of the way genes 
   
 In this project, I constructed a pipeline using a python programming language for analyzing Gene expression data obtained from the GEO database. The Gene Expression Omnibus (GEO) database is a part of the NCBI databases and holds a large number of gene expression datasets. 
 
-Use the `BLANK_README.md` to get started.
+Use the `Gene_Expression_Analysis_pipeline.ipynb` to get started.
 
 List of libraries/datasets used for constructing the pipeline:
 
